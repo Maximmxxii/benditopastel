@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bendito Pastel</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Encabezado -->
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo-link">
+                <img src="Logo.jpg" alt="Logo Bendito Pastel" class="logo-header">
+                <span class="logo-nombre">Bendito Pastel</span>
+            </a>
+            <div class="header-menu">
+                <nav class="nav">
+                    <a href="#sobre-nosotros">Sobre nosotros</a>
+                    <a href="#productos">Productos</a>
+                    <a href="contacto.html">Contáctanos</a>
+                </nav>
+                <button class="btn-aprende" onclick="aprenderConfirm()">Aprende con nosotros</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sección principal -->
+    <section class="main-banner">
+        <img src="Logo.jpg" alt="Logo Bendito Pastel Grande" class="banner-logo">
+        <h1>Bendito Pastel</h1>
+        <p class="slogan">Pecados hechos con amor</p>
+        <p class="since">Since 2023</p>
+        <p class="descripcion">Disfruta de nuestros postres artesanales, hechos con los mejores ingredientes y una pizca de cariño. ¡Déjate tentar por nuestros sabores únicos!</p>
+        <!-- Botón que redirige a la página de contacto con formularios -->
+        <a href="contacto.html" class="btn-cta">Contáctanos</a>
+    </section>
+
+    <!-- Sección de productos destacados -->
+    <section class="productos" id="productos">
+        <h2>Productos destacados</h2>
+        <div class="productos-lista">
+            <div class="producto-card">
+                <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80" alt="Torta de Chocolate">
+                <h3>Torta de Chocolate</h3>
+                <p>Deliciosa y esponjosa torta rellena y cubierta con el mejor chocolate artesanal.</p>
+            </div>
+            <div class="producto-card">
+                <img src="https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=400&q=80" alt="Cheesecake de Fresa">
+                <h3>Cheesecake de Fresa</h3>
+                <p>Cremoso cheesecake con base crocante y topping de fresas frescas.</p>
+            </div>
+            <div class="producto-card">
+                <img src="https://images.unsplash.com/photo-1464306076886-debca5e8a6b0?auto=format&fit=crop&w=400&q=80" alt="Brownies Artesanales">
+                <h3>Brownies Artesanales</h3>
+                <p>Brownies húmedos y chocolatosos, perfectos para acompañar tu café.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Sobre nosotros -->
+    <section class="sobre-nosotros" id="sobre-nosotros">
+        <img src="Logo.jpg" alt="Logo Bendito Pastel" class="sobre-nosotros-img">
+        <h2>Sobre nosotros</h2>
+        <p>
+            En Bendito Pastel somos apasionados por la repostería artesanal. Desde 2023, creamos postres únicos y deliciosos, hechos con ingredientes de la mejor calidad y mucho amor. Nuestro objetivo es endulzar tus momentos especiales y convertir cada bocado en un pequeño pecado hecho con cariño.
+        </p>
+        <p>
+            Creemos en la tradición, la creatividad y el sabor auténtico. ¡Gracias por confiar en nosotros para acompañar tus celebraciones y antojos!
+        </p>
+    </section>
+
+    <!-- Pie de página -->
+    <footer class="footer">
+        <div class="footer-info">
+            <p><strong>Contacto:</strong> benditopastel@email.com | Medellín, Colombia</p>
+            <p><strong>Horarios de atención:</strong> Lunes a sábado: 8:00 am a 5:00 pm | Domingo: 8:30 am a 4:00 pm</p>
+        </div>
+        <div class="footer-redes">
+            <a href="#" title="Instagram" class="footer-icon">&#x1F4F7;</a>
+            <a href="#" title="Facebook" class="footer-icon">&#x1F426;</a>
+            <a href="#" title="WhatsApp" class="footer-icon">&#x1F4F1;</a>
+        </div>
+        <div class="footer-copy">
+            <p>&copy; 2023 Bendito Pastel. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
+<script>
+function aprenderConfirm() {
+    if (confirm('¿Deseas realmente aprender con nosotros?')) {
+        // Redirige a contacto.html y muestra la pestaña de sugerencias
+        window.location.href = 'contacto.html#sugerencias';
+    }
+}
+</script> 

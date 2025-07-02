@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | Bendito Pastel</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .tabs-container {
+            max-width: 420px;
+            margin: 60px auto 0 auto;
+            background: var(--blanco);
+            border-radius: 18px;
+            box-shadow: 0 2px 12px rgba(255,182,193,0.10);
+            padding: 0 0 28px 0;
+        }
+        .tabs {
+            display: flex;
+            border-bottom: 2px solid var(--rosa-fuerte);
+        }
+        .tab {
+            flex: 1;
+            text-align: center;
+            padding: 18px 0;
+            cursor: pointer;
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: var(--marron);
+            background: var(--blanco);
+            border: none;
+            outline: none;
+            transition: background 0.2s, color 0.2s;
+        }
+        .tab.active {
+            background: var(--rosa-fuerte);
+            color: var(--blanco);
+        }
+        .tab-content {
+            display: none;
+            padding: 24px 28px 0 28px;
+        }
+        .tab-content.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo-link">
+                <img src="Logo.jpg" alt="Logo Bendito Pastel" class="logo-header">
+                <span class="logo-nombre">Bendito Pastel</span>
+            </a>
+            <div class="header-menu">
+                <nav class="nav">
+                    <a href="index.html#sobre-nosotros">Sobre nosotros</a>
+                    <a href="index.html#productos">Productos</a>
+                    <a href="contacto.html">Contáctanos</a>
+                </nav>
+                <button class="btn-aprende" onclick="aprenderConfirm()">Aprende con nosotros</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="tabs-container">
+            <div class="tabs">
+                <button class="tab active" onclick="showTab('contacto')">Contacto</button>
+                <button class="tab" onclick="showTab('sugerencias')">Sugerencias</button>
+            </div>
+            <div id="contacto" class="tab-content active">
+                <h2>Contacto</h2>
+                <form class="form-contacto">
+                    <input type="text" name="nombre" placeholder="Tu nombre" required>
+                    <input type="email" name="email" placeholder="Tu correo electrónico" required>
+                    <textarea name="mensaje" placeholder="Escribe tu mensaje" required></textarea>
+                    <button type="submit">Enviar mensaje</button>
+                </form>
+            </div>
+            <div id="sugerencias" class="tab-content">
+                <h2>Sugerencias</h2>
+                <form class="form-sugerencias" onsubmit="return validarSugerencias(event)">
+                    <input type="text" name="nombre_sugerencia" placeholder="Tu nombre" required>
+                    <input type="tel" name="telefono" placeholder="Tu teléfono" required pattern="[0-9]+" title="Solo números">
+                    <input type="email" name="email_sugerencia" placeholder="Tu correo electrónico" required>
+                    <select name="asunto" required>
+                        <option value="">Selecciona un asunto</option>
+                        <option value="pedido">Realizar un pedido</option>
+                        <option value="informacion">Solicitar información</option>
+                        <option value="cotizacion">Solicitar cotización</option>
+                        <option value="evento">Evento especial</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                    <textarea name="sugerencia" placeholder="¿Tienes alguna sugerencia para nosotros?" required></textarea>
+                    <button type="submit">Enviar sugerencia</button>
+                    <div id="error-sugerencias" style="color: #d32f2f; margin-top: 8px; display: none;"></div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-info">
+            <p><strong>Contacto:</strong> benditopastel@email.com | Medellín, Colombia</p>
+            <p><strong>Horarios de atención:</strong> Lunes a sábado: 8:00 am a 5:00 pm | Domingo: 8:30 am a 4:00 pm</p>
+        </div>
+        <div class="footer-redes">
+            <a href="#" title="Instagram" class="footer-icon">&#x1F4F7;</a>
+            <a href="#" title="Facebook" class="footer-icon">&#x1F426;</a>
+            <a href="#" title="WhatsApp" class="footer-icon">&#x1F4F1;</a>
+        </div>
+        <div class="footer-copy">
+            <p>&copy; 2023 Bendito Pastel. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    <script src="app.js"></script>
+    <script>
+    function aprenderConfirm() {
+        if (confirm('¿Deseas realmente aprender con nosotros?')) {
+            window.location.href = 'contacto.html#sugerencias';
+        }
+    }
+    </script>
+</body>
+</html> 
